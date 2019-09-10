@@ -80,7 +80,7 @@ if __name__ == "__main__":
     rate = sio.loadmat('./data/data_%d' %N)['output_obj']
 
     # increase h to close to 1 for better training; it is a trick widely adopted in deep learning
-    channel = channel * 1000000
+    channel = channel * 1000000 #调整到接近1吗？
 
     # generate the train and test data sample index
     # data are splitted as 80:20
@@ -110,9 +110,9 @@ if __name__ == "__main__":
         if i> 0 and i % Delta == 0:
             # index counts from 0
             if Delta > 1:
-                max_k = max(k_idx_his[-Delta:-1]) +1;
+                max_k = max(k_idx_his[-Delta:-1]) +1
             else:
-                max_k = k_idx_his[-1] +1;
+                max_k = k_idx_his[-1] +1
             K = min(max_k +1, N)
 
         if i < n - num_test:
