@@ -129,10 +129,10 @@ if __name__ == "__main__":
         if i> 0 and i % Delta == 0:
             # index counts from 0
             if Delta > 1:
-                max_k = max(k_idx_his[-Delta:-1]) +1; 
+                max_k = max(k_idx_his[-Delta:-1]) +1
             else:
-                max_k = k_idx_his[-1] +1; 
-            K = min(max_k +1, N)
+                max_k = k_idx_his[-1] +1
+            K = min(max_k, N)
         
         i_idx = i
         h = channel[i_idx,:]
